@@ -9,6 +9,7 @@ URL:		http://www.wenq.org
 License:	GPLv2
 Group:		System/Fonts/True type
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires(post):	mkfontdir, mkfontscale, fontconfig
 Requires(postun):	mkfontdir, mkfontscale, fontconfig
 
