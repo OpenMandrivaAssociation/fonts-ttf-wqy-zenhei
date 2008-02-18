@@ -2,11 +2,11 @@
 
 Summary:	WenQuanYi ZenHei TrueType font
 Name:		fonts-ttf-%{oname}
-Version:	0.2.15
+Version:	0.4.23
 Release:	%mkrel 1
 Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}-1.tar.gz
 URL:		http://www.wenq.org
-License:	GPLv2
+License:	GPLv2+
 Group:		System/Fonts/True type
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
