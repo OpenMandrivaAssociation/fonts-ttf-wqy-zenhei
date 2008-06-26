@@ -2,9 +2,9 @@
 
 Summary:	WenQuanYi ZenHei TrueType font
 Name:		fonts-ttf-%{oname}
-Version:	0.5.23
+Version:	0.6.26
 Release:	%mkrel 1
-Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}.tar.gz
+Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}-0.tar.gz
 URL:		http://www.wenq.org
 License:	GPLv2+
 Group:		System/Fonts/True type
