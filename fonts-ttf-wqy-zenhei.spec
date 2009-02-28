@@ -2,7 +2,7 @@
 
 Summary:	WenQuanYi ZenHei TrueType font
 Name:		fonts-ttf-%{oname}
-Version:	0.6.26
+Version:	0.8.38
 Release:	%mkrel 1
 Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}-0.tar.gz
 URL:		http://www.wenq.org
@@ -33,7 +33,10 @@ fine-tuning of the on-screen performance.
 rm -fr %{buildroot}
 
 install -d %{buildroot}/%{_datadir}/fonts/TTF/%{oname}/
-install -m 644 wqy-zenhei.ttf %{buildroot}/%{_datadir}/fonts/TTF/%{oname}/
+install -m 644 wqy-zenhei.ttc %{buildroot}/%{_datadir}/fonts/TTF/%{oname}/
+
+install -d %{buildroot}/%{_sysconfdir}/fonts/conf.avail/
+install -m 644 66-wqy-zenhei-sharp.conf %{buildroot}/%{_sysconfdir}/fonts/conf.avail/99-wqy-zenhei-sharp.conf
 
 mkdir -p %{buildroot}%_sysconfdir/X11/fontpath.d/
 ln -s ../../..%_datadir/fonts/TTF/%{oname} \
@@ -57,6 +60,7 @@ rm -fr %{buildroot}
 %files
 %defattr(0644,root,root,0755)
 %doc ChangeLog AUTHORS COPYING README
+%{_sysconfdir}/fonts/conf.avail/99-wqy-zenhei-sharp.conf
 %dir %{_datadir}/fonts/TTF/%{oname}/
-%{_datadir}/fonts/TTF/%{oname}/*.ttf
+%{_datadir}/fonts/TTF/%{oname}/*.ttc
 %{_sysconfdir}/X11/fontpath.d/%{oname}:pri=50
