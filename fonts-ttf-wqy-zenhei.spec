@@ -3,15 +3,15 @@
 Summary:	WenQuanYi ZenHei TrueType font
 Name:		fonts-ttf-%{oname}
 Version:	0.8.38
-Release:	%mkrel 2
+Release:	%mkrel 3
 Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}-0.tar.gz
 URL:		http://www.wenq.org
 License:	GPLv2+
 Group:		System/Fonts/True type
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires(post):	mkfontdir, mkfontscale, fontconfig
-Requires(postun):	mkfontdir, mkfontscale, fontconfig
+Requires(post):	mkfontdir, mkfontscale
+Requires(postun):	mkfontdir, mkfontscale
 
 %description
 The WenQuanYi Zen Hei is the first open-source Chinese font
@@ -45,13 +45,11 @@ ln -s ../../..%_datadir/fonts/TTF/%{oname} \
 %post
 [ -x %{_bindir}/mkfontdir ] && %{_bindir}/mkfontdir %{_datadir}/fonts/TTF/%{oname}
 [ -x %{_bindir}/mkfontscale ] && %{_bindir}/mkfontscale %{_datadir}/fonts/TTF/%{oname}
-[ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache
 
 %postun
 if [ "$1" = "0" ]; then
   [ -x %{_bindir}/mkfontdir ] && %{_bindir}/mkfontdir %{_datadir}/fonts/TTF/%{oname}
   [ -x %{_bindir}/mkfontscale ] && %{_bindir}/mkfontscale %{_datadir}/fonts/TTF/%{oname}
-  [ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache
 fi
 
 %clean
