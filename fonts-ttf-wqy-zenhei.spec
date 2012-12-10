@@ -63,3 +63,57 @@ rm -fr %{buildroot}
 %dir %{_datadir}/fonts/TTF/%{oname}/
 %{_datadir}/fonts/TTF/%{oname}/*.ttc
 %{_sysconfdir}/X11/fontpath.d/%{oname}:pri=50
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 0.9.45-3mdv2011.0
++ Revision: 675581
+- br fontconfig for fc-query used in new rpm-setup-build
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.9.45-2mdv2011.0
++ Revision: 610739
+- rebuild
+
+* Mon Apr 05 2010 Funda Wang <fwang@mandriva.org> 0.9.45-1mdv2010.1
++ Revision: 531678
+- new version 0.9.45
+
+* Wed Jan 20 2010 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 0.8.38-3mdv2010.1
++ Revision: 494165
+- fc-cache is now called by an rpm filetrigger
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 0.8.38-2mdv2010.0
++ Revision: 437572
+- rebuild
+
+* Sat Feb 28 2009 Funda Wang <fwang@mandriva.org> 0.8.38-1mdv2009.1
++ Revision: 346036
+- new test version 0.8.38
+
+* Thu Jun 26 2008 Funda Wang <fwang@mandriva.org> 0.6.26-1mdv2009.0
++ Revision: 229231
+- New version 0.6.26
+
+* Sat Apr 12 2008 Funda Wang <fwang@mandriva.org> 0.5.23-1mdv2009.0
++ Revision: 192598
+- New version 0.5.23
+
+* Mon Feb 18 2008 Funda Wang <fwang@mandriva.org> 0.4.23-1mdv2008.1
++ Revision: 171396
+- New version 0.4.23
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Tue Oct 09 2007 Funda Wang <fwang@mandriva.org> 0.2.15-1mdv2008.1
++ Revision: 95896
+- New version 0.2.15
+
+* Mon Aug 13 2007 Funda Wang <fwang@mandriva.org> 0.2.10-1mdv2008.0
++ Revision: 62752
+- Import fonts-ttf-wqy-zenhei
+- Created package structure for fonts-ttf-wqy-zenhei.
+
