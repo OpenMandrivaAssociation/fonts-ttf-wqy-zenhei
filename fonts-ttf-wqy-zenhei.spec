@@ -5,7 +5,7 @@ Name:		fonts-ttf-%{oname}
 Version:	0.9.45
 Release:	4
 Source:		http://downloads.sourceforge.net/wqy/%{oname}-%{version}.tar.gz
-URL:		http://www.wenq.org
+URL:		https://www.wenq.org
 License:	GPLv2+
 Group:		System/Fonts/True type
 BuildArch:	noarch
